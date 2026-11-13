@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Portfolio of Sakib Kader Chowdhury — computer information technology, IT support, university operations, and student leadership.">
+  <title>Sakib Kader Chowdhury — Portfolio</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: #f7f8fa;
+      --surface: #ffffff;
+      --surface-soft: #edf3f9;
+      --ink: #172434;
+      --muted: #536273;
+      --line: #d9e1e9;
+      --accent: #245fc4;
+      --accent-soft: #e2edfc;
+      --accent-ink: #123f8b;
+      --shadow: 0 12px 36px rgba(22, 43, 70, .07);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    .skip-link { position: absolute; left: 16px; top: -60px; z-index: 10; padding: 12px 16px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; }
+    .skip-link:focus { top: 12px; }
+    .wrap { width: min(var(--max), calc(100% - 64px)); margin-inline: auto; }
+    .topbar { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--page) 90%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid color-mix(in srgb, var(--line) 78%, transparent); }
+    .nav { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-weight: 750; letter-spacing: -.02em; }
+    .monogram { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 11px; color: #fff; background: var(--accent); font-size: 13px; letter-spacing: .04em; }
+    .nav-links { display: flex; align-items: center; gap: clamp(16px, 3vw, 34px); }
+    .nav-links a { min-height: 44px; display: inline-flex; align-items: center; color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 650; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links .nav-cta { padding-inline: 16px; color: var(--accent-ink); background: var(--accent-soft); border-radius: 8px; }
+    main { overflow: clip; }
+    .hero { padding: clamp(56px, 8vw, 100px) 0 74px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(290px, .72fr); gap: clamp(36px, 7vw, 88px); align-items: center; }
+    .eyebrow { margin: 0 0 18px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .14em; line-height: 1.4; text-transform: uppercase; }
+    h1 { max-width: 720px; margin: 0; font-size: clamp(42px, 6.4vw, 76px); font-weight: 740; letter-spacing: -.065em; line-height: .99; }
+    .hero-copy { max-width: 650px; margin: 24px 0 0; color: var(--muted); font-size: clamp(17px, 1.8vw, 20px); line-height: 1.65; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: 0 18px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 700; transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-1px); }
+    .button.primary { color: #fff; background: var(--accent); border-color: var(--accent); }
+    .button.secondary { color: var(--ink); background: var(--surface); }
+    .hero-card { position: relative; padding: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+    .card-kicker { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .card-kicker::before { content: ""; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
+    .focus-list { display: grid; gap: 0; }
+    .focus-item { display: grid; grid-template-columns: 42px 1fr; gap: 14px; align-items: start; padding: 17px 0; border-top: 1px solid var(--line); }
+    .focus-item:first-child { border-top: 0; padding-top: 0; }
+    .focus-index { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; padding-top: 3px; }
+    .focus-item h2 { margin: 0; font-size: 16px; line-height: 1.35; letter-spacing: -.02em; }
+    .focus-item p { margin: 5px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .section { padding: 76px 0; border-top: 1px solid var(--line); }
+    .section-heading { display: grid; grid-template-columns: 230px 1fr; gap: 32px; margin-bottom: 34px; align-items: start; }
+    .section-label { margin: 4px 0 0; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .section-heading h2 { margin: 0; font-size: clamp(29px, 4vw, 44px); font-weight: 720; letter-spacing: -.05em; line-height: 1.1; }
+    .section-heading .intro { max-width: 660px; margin: 13px 0 0; color: var(--muted); }
+    .experience-list { display: grid; gap: 14px; }
+    .experience { display: grid; grid-template-columns: 190px 1fr; gap: 28px; padding: 25px 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    .experience time, .experience .period { color: var(--muted); font-size: 13px; font-weight: 650; }
+    .experience h3 { margin: 0; font-size: 20px; line-height: 1.3; letter-spacing: -.025em; }
+    .experience .organization { margin: 4px 0 12px; color: var(--accent-ink); font-size: 14px; font-weight: 700; }
+    .experience ul { margin: 0; padding-left: 19px; color: var(--muted); }
+    .experience li { padding: 2px 0; }
+    .experience li::marker { color: var(--accent); }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .skill-card { min-height: 185px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    .skill-card .number { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .1em; }
+    .skill-card h3 { margin: 17px 0 9px; font-size: 18px; letter-spacing: -.025em; }
+    .skill-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .info-card { padding: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    .info-card h3 { margin: 0 0 16px; font-size: 20px; letter-spacing: -.03em; }
+    .info-card p { margin: 0; color: var(--muted); }
+    .info-card p + p { margin-top: 12px; }
+    .credential { padding: 13px 0; border-top: 1px solid var(--line); }
+    .credential:first-of-type { border-top: 0; padding-top: 0; }
+    .credential strong { display: block; font-size: 15px; }
+    .credential span { color: var(--muted); font-size: 14px; }
+    .contact { padding: 76px 0 88px; }
+    .contact-panel { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; padding: clamp(28px, 5vw, 52px); background: var(--surface-soft); border: 1px solid var(--line); border-radius: 14px; }
+    .contact-panel h2 { margin: 0; font-size: clamp(30px, 4.5vw, 48px); letter-spacing: -.05em; line-height: 1.08; }
+    .contact-panel p { max-width: 560px; margin: 13px 0 0; color: var(--muted); }
+    .contact-links { display: grid; gap: 10px; min-width: 225px; }
+    .contact-links a { min-height: 46px; display: flex; align-items: center; padding: 0 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font-size: 14px; font-weight: 700; text-decoration: none; overflow-wrap: anywhere; }
+    .contact-links a:hover { border-color: var(--accent); color: var(--accent); }
+    footer { padding: 22px 0 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .footer-row p { margin: 0; }
+    .back-top { color: var(--accent-ink); font-weight: 700; text-decoration: none; }
+    @media (prefers-color-scheme: dark) {
+      :root { --page: #151b22; --surface: #1d2630; --surface-soft: #202d3b; --ink: #f3f6fa; --muted: #c0cad5; --line: #344352; --accent: #8ab4ff; --accent-soft: #26384f; --accent-ink: #a9c9ff; --shadow: 0 12px 36px rgba(0,0,0,.2); }
+      .button.primary { color: #10213b; }
+    }
+    @media (max-width: 760px) {
+      .wrap { width: min(var(--max), calc(100% - 40px)); }
+      .nav { min-height: 64px; }
+      .nav-links { gap: 10px; }
+      .nav-links a { font-size: 13px; }
+      .nav-links a:nth-child(2), .nav-links a:nth-child(3) { display: none; }
+      .hero { padding-top: 56px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+      .hero-card { max-width: 540px; }
+      .section { padding: 60px 0; }
+      .section-heading { grid-template-columns: 1fr; gap: 12px; margin-bottom: 25px; }
+      .experience { grid-template-columns: 1fr; gap: 8px; padding: 22px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skill-card { min-height: auto; }
+      .split-grid { grid-template-columns: 1fr; }
+      .contact-panel { grid-template-columns: 1fr; }
+      .contact-links { min-width: 0; }
+    }
+    @media (max-width: 420px) {
+      .wrap { width: calc(100% - 32px); }
+      .brand { font-size: 14px; }
+      .monogram { width: 34px; height: 34px; }
+      .nav-links .nav-cta { padding-inline: 11px; }
+      .hero { padding-top: 46px; }
+      .hero-actions .button { flex: 1 1 auto; }
+      .hero-card { padding: 22px; }
+      .contact-links a { font-size: 13px; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+    @media print {
+      .topbar, .hero-actions, .back-top { display: none !important; }
+      body { background: #fff; color: #172434; }
+      .section, .contact { padding: 32px 0; }
+      .hero { padding: 36px 0; }
+      .experience, .skill-card, .info-card, .hero-card, .contact-panel { break-inside: avoid; box-shadow: none; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Sakib Kader Chowdhury, home"><span class="monogram" aria-hidden="true">SK</span><span>Sakib Kader Chowdhury</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Capabilities</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Computer Information Technology · Technical Communication</p>
+          <h1 id="hero-title">Technology that keeps people and systems moving.</h1>
+          <p class="hero-copy">I’m Sakib—a technology and operations professional with experience in IT support, university scheduling, access services, and student learning programs. I bring a practical, people-centered approach to solving everyday problems.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#experience">Explore my experience</a>
+            <a class="button secondary" href="mailto:sakib.kader.chowdhury@mnsu.edu">Email me</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Areas of experience">
+          <div class="card-kicker">Where I contribute</div>
+          <div class="focus-list">
+            <div class="focus-item"><span class="focus-index">01</span><div><h2>Technology support</h2><p>Troubleshooting, software setup, systems upkeep, and networking fundamentals.</p></div></div>
+            <div class="focus-item"><span class="focus-index">02</span><div><h2>Campus operations</h2><p>Scheduling, room coordination, access services, and event logistics.</p></div></div>
+            <div class="focus-item"><span class="focus-index">03</span><div><h2>Learning & community</h2><p>Tutoring, literacy activities, student events, and collaborative programs.</p></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="section-label">Experience</p>
+          <div><h2 id="experience-title">A mix of technical work and people-facing operations.</h2><p class="intro">Across campus roles, IT support, and student programs, I’ve helped teams keep services organized and people supported.</p></div>
+        </div>
+        <div class="experience-list">
+          <article class="experience">
+            <div class="period">Spring 2024 — Fall 2026</div>
+            <div><h3>Scheduling Office Assistant</h3><p class="organization">University Scheduling & Conference Services · Minnesota State University, Mankato</p><ul><li>Coordinated class schedules across departments, helping optimize room use and reduce conflicts.</li><li>Worked with faculty and department heads on course, event, seminar, and special scheduling needs.</li><li>Managed calendars and bookings in EMS and supported university event logistics.</li></ul></div>
+          </article>
+          <article class="experience">
+            <div class="period">Summer 2025</div>
+            <div><h3>Rec N’ Read Program Assistant</h3><p class="organization">College of Allied Health</p><ul><li>Supported K–5 students through literacy-focused summer activities and small-group reading support.</li><li>Helped foster social and emotional growth while working with staff to deliver engaging camp experiences.</li></ul></div>
+          </article>
+          <article class="experience">
+            <div class="period">Spring 2021 — Fall 2023</div>
+            <div><h3>Dispatch & Key Room</h3><p class="organization">University Security · Minnesota State University, Mankato</p><ul><li>Created keys, managed door access through MavCARD, and handled parking inquiries at the front desk.</li><li>Became the first student employee to complete dual training across key room and parking services.</li></ul></div>
+          </article>
+          <article class="experience">
+            <div class="period">Jan 2019 — Jan 2020</div>
+            <div><h3>Junior IT Specialist & Administrator</h3><p class="organization">Legend Holdings Holding LTD</p><ul><li>Provided end-user technical support, troubleshooting, and software installation.</li><li>Maintained daily IT operations, performed routine system upkeep, and escalated complex issues to senior IT staff.</li></ul></div>
+          </article>
+          <article class="experience">
+            <div class="period">BRAC University</div>
+            <div><h3>Entrepreneurship Development · Computer Club · Student Tutor</h3><p class="organization">Student leadership, events, and peer learning</p><ul><li>Organized entrepreneurship workshops, coding competitions, networking events, coding nights, and study sessions.</li><li>Led group tutoring and hands-on learning to help students build technical, problem-solving, and business skills.</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="section-label">Capabilities</p>
+          <div><h2 id="skills-title">Technical foundations. Clear communication. Follow-through.</h2><p class="intro">A practical toolkit for supporting users, working with systems, and contributing across teams.</p></div>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card"><span class="number">01 / SOFTWARE</span><h3>Programming & data</h3><p>Python, Java, SQL, C++, HTML, JavaScript, SAP ABAP; data structures, algorithms, and database management.</p></article>
+          <article class="skill-card"><span class="number">02 / SYSTEMS</span><h3>IT & infrastructure</h3><p>Computer networking, information security fundamentals, Linux environments, Cisco Packet Tracer, EMS, and Microsoft 365.</p></article>
+          <article class="skill-card"><span class="number">03 / PEOPLE</span><h3>Collaboration & service</h3><p>Communication, teamwork, adaptability, problem-solving, tutoring, event coordination, and user support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="section-label">About & involvement</p>
+          <div><h2 id="about-title">Building skills by helping others build theirs.</h2><p class="intro">My background connects technical learning with service, campus life, and community participation.</p></div>
+        </div>
+        <div class="split-grid">
+          <article class="info-card">
+            <h3>Education & certifications</h3>
+            <div class="credential"><strong>Bachelor of Science, Computer Information Technology</strong><span>Minor in Technical Communication · Minnesota State University, Mankato</span></div>
+            <div class="credential"><strong>Google IT Support</strong><span>Coursera</span></div>
+            <div class="credential"><strong>Microsoft Excel & Word</strong><span>Coursera</span></div>
+          </article>
+          <article class="info-card">
+            <h3>Leadership & service</h3>
+            <p><strong>Vice President, BSO</strong> at Minnesota State University, Mankato.</p>
+            <p>Participated in community service projects, including volunteering with local NGOs and churches.</p>
+            <p>At BRAC University, contributed to entrepreneurship and computer-club activities while supporting fellow students as a tutor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-panel">
+        <div><p class="section-label">Get in touch</p><h2 id="contact-title">Let’s connect.</h2><p>Reach out about IT support, technology, campus operations, or opportunities to work together.</p></div>
+        <div class="contact-links"><a href="mailto:sakib.kader.chowdhury@mnsu.edu">sakib.kader.chowdhury@mnsu.edu</a><a href="tel:+17189121577">+1 (718) 912-1577</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-row"><p>© Sakib Kader Chowdhury · Portfolio</p><a class="back-top" href="#top">Back to top ↑</a></div></footer>
+</body>
+</html>
